@@ -1,0 +1,17 @@
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\bin\Debug\net8.0\Ratting.Aplication.deps.json
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\bin\Debug\net8.0\Ratting.Aplication.runtimeconfig.json
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\bin\Debug\net8.0\Ratting.Aplication.dll
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\bin\Debug\net8.0\Ratting.Aplication.pdb
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\bin\Debug\net8.0\Ratting.Domain.dll
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\bin\Debug\net8.0\Ratting.Domain.pdb
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.csproj.AssemblyReference.cache
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.AssemblyInfoInputs.cache
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.AssemblyInfo.cs
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.csproj.CoreCompileInputs.cache
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting..D7D506DA.Up2Date
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.dll
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\refint\Ratting.Aplication.dll
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.pdb
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\Ratting.Aplication.genruntimeconfig.cache
+E:\UnityProjects\Ratting\Server\Ratting.Aplication\obj\Debug\net8.0\ref\Ratting.Aplication.dll

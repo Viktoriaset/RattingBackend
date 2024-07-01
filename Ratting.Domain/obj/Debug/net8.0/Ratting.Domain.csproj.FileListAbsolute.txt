@@ -1,0 +1,13 @@
+E:\UnityProjects\Ratting\Server\Ratting.Domain\bin\Debug\net8.0\Ratting.Domain.deps.json
+E:\UnityProjects\Ratting\Server\Ratting.Domain\bin\Debug\net8.0\Ratting.Domain.runtimeconfig.json
+E:\UnityProjects\Ratting\Server\Ratting.Domain\bin\Debug\net8.0\Ratting.Domain.dll
+E:\UnityProjects\Ratting\Server\Ratting.Domain\bin\Debug\net8.0\Ratting.Domain.pdb
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.AssemblyInfoInputs.cache
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.AssemblyInfo.cs
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.csproj.CoreCompileInputs.cache
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.dll
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\refint\Ratting.Domain.dll
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.pdb
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.genruntimeconfig.cache
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\ref\Ratting.Domain.dll
