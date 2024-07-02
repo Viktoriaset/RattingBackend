@@ -4,6 +4,7 @@ using Ratting.Application;
 using Ratting.Persistance;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using Ratting.Aplication;
 using Ratting.Persistance.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);

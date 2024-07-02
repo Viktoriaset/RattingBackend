@@ -1,4 +1,5 @@
-﻿using Ratting.Application.Common.MessageParamsName;
+﻿using Ratting.Aplication.Battle;
+using Ratting.Application.Common.MessageParamsName;
 using Ratting.Application.MatchMaking;
 
 namespace Ratting.Application.Battle;
@@ -7,11 +8,14 @@ public class BattleCreateService
 {
     private readonly MatchMakingConfiguration m_matchMakingConfiguration;
     private readonly HttpClient m_client;
+    private readonly BattleRoomsController m_battleRoomsController;
 
-    public BattleCreateService(MatchMakingConfiguration makingConfiguration, HttpClient client)
+    public BattleCreateService(MatchMakingConfiguration makingConfiguration, HttpClient client,
+        BattleRoomsController battleRoomsController)
     {
         m_matchMakingConfiguration = makingConfiguration;
         m_client = client;
+        m_battleRoomsController = battleRoomsController;
     }
     
     public async void CreateBattle(List<BattleParticipant> participants)
@@ -34,6 +38,7 @@ public class BattleCreateService
             }
 
             await Task.WhenAll(waitingPlayers);
+            OnRoomCreated(participants, roomName);
         }
         catch (Exception e)
         {
@@ -60,6 +65,17 @@ public class BattleCreateService
 
         var responce = await m_client.PostAsync(participant.PlayerAddress, content);
         responce.EnsureSuccessStatusCode();
+    }
+    
+    private void OnRoomCreated(List<BattleParticipant> participants, Guid roomId)
+    {
+        BattleRoom battleRoom = new()
+        {
+            Participants = participants,
+            roomId = roomId
+        };
+        
+        m_battleRoomsController.OnRoomCreated(battleRoom);
     }
 
     private void CancelBattle(List<BattleParticipant> participants)
