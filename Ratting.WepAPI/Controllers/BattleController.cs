@@ -2,7 +2,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Ratting.Aplication.Battle.Commands;
-using Ratting.Application.MatchMaking;
 using Ratting.WepAPI.Models;
 
 namespace Ratting.WepAPI.Controllers;
