@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Ratting.Aplication.Common.Mappings;
-using Ratting.Aplication.MatchMaking;
+using Ratting.Application.Common.Mappings;
+using Ratting.Application.MatchMaking;
 
 namespace Ratting.WepAPI.Models;
 

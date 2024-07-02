@@ -2,7 +2,7 @@
 using System.Text.Json;
 using FluentValidation;
 using Microsoft.AspNetCore.Http;
-using Ratting.Aplication.Common.Exceptions;
+using Ratting.Application.Common.Exceptions;
 
 namespace Ratting.Persistance.Middleware;
 

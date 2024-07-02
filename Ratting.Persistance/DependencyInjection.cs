@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Ratting.Aplication.Interfaces;
+using Ratting.Application.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

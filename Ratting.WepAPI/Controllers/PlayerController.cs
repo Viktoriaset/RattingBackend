@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Ratting.Aplication.Players.Commands.CreatePlayer;
-using Ratting.Aplication.Players.Commands.UpdatePlayer;
-using Ratting.Aplication.Players.Queries;
-using Ratting.Aplication.Players.Queries.GetPlayer;
+using Ratting.Application.Players.Commands.CreatePlayer;
+using Ratting.Application.Players.Commands.UpdatePlayer;
+using Ratting.Application.Players.Queries;
+using Ratting.Application.Players.Queries.GetPlayer;
 using Ratting.WepAPI.Models;
 
 namespace Ratting.WepAPI.Controllers

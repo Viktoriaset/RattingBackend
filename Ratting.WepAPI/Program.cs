@@ -1,6 +1,6 @@
-using Ratting.Aplication.Common.Mappings;
-using Ratting.Aplication.Interfaces;
-using Ratting.Aplication;
+using Ratting.Application.Common.Mappings;
+using Ratting.Application.Interfaces;
+using Ratting.Application;
 using Ratting.Persistance;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,7 +20,7 @@ builder.Services.AddAutoMapper(config =>
     config.AddProfile(new AssemblyMappingProfile(typeof(IRattingDBContext).Assembly));
 });
 builder.Services.AddHttpClient();
-builder.Services.AddAplication();
+builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddCors(options =>
 {

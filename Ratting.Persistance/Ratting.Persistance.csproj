@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ratting.Aplication\Ratting.Aplication.csproj" />
+    <ProjectReference Include="..\Ratting.Application\Ratting.Application.csproj" />
     <ProjectReference Include="..\Ratting.Domain\Ratting.Domain.csproj" />
   </ItemGroup>
 

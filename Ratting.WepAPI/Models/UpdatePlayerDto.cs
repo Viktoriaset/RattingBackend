@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Ratting.Aplication.Common.Mappings;
-using Ratting.Aplication.Players.Commands.UpdatePlayer;
+using Ratting.Application.Common.Mappings;
+using Ratting.Application.Players.Commands.UpdatePlayer;
 
 namespace Ratting.WepAPI.Models
 {

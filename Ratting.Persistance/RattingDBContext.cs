@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Ratting.Aplication.Interfaces;
+using Ratting.Application.Interfaces;
 using Ratting.Domain;
 using Ratting.Persistance.EntityTypeConfigurations;
 
