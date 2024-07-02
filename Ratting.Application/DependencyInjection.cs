@@ -13,13 +13,13 @@ namespace Ratting.Aplication
     {
         public static void AddApplication(this IServiceCollection services)
         {
+            services.AddTransient<MatchMakingConfiguration>();
+            services.AddTransient<BattleRoomsController>();
+            services.AddTransient<BattleCreateService>();
+            services.AddTransient<MatchMakingService>();
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
             services.AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-            services.AddSingleton<BattleCreateService>();
-            services.AddSingleton<BattleRoomsController>();
-            services.AddSingleton<MatchMakingConfiguration>();
-            services.AddSingleton<MatchMakingService>();
         }
     }
 }

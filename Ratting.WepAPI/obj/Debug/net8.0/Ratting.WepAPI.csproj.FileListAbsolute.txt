@@ -14,7 +14,6 @@ E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\SQLitePCLRaw.pro
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
-E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Aplication.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Domain.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Persistance.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -39,7 +38,6 @@ E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\runtimes\osx-x64
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll
-E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Aplication.pdb
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Persistance.pdb
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Domain.pdb
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\obj\Debug\net8.0\Ratting.WepAPI.csproj.AssemblyReference.cache
@@ -71,3 +69,6 @@ E:\UnityProjects\Ratting\Server\Ratting.WepAPI\obj\Debug\net8.0\Ratting.WepAPI.g
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\obj\Debug\net8.0\ref\Ratting.WepAPI.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\FluentValidation.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Application.dll
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Application.pdb
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\obj\Debug\net8.0\Ratting.WepAPI.sourcelink.json

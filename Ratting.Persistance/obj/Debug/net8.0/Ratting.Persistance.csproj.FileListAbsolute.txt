@@ -2,9 +2,7 @@ E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Per
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Persistance.runtimeconfig.json
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Persistance.dll
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Persistance.pdb
-E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Aplication.dll
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Domain.dll
-E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Aplication.pdb
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Domain.pdb
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\Ratting.Persistance.csproj.AssemblyReference.cache
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\Ratting.Persistance.GeneratedMSBuildEditorConfig.editorconfig
@@ -17,3 +15,6 @@ E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\refint\Ratt
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\Ratting.Persistance.pdb
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\Ratting.Persistance.genruntimeconfig.cache
 E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\ref\Ratting.Persistance.dll
+E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Application.dll
+E:\UnityProjects\Ratting\Server\Ratting.Persistance\bin\Debug\net8.0\Ratting.Application.pdb
+E:\UnityProjects\Ratting\Server\Ratting.Persistance\obj\Debug\net8.0\Ratting.Persistance.sourcelink.json

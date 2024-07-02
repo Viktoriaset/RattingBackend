@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore.Design": "8.0.6",
           "Microsoft.EntityFrameworkCore.Sqlite": "8.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.6",
-          "Ratting.Aplication": "1.0.0",
+          "Ratting.Application": "1.0.0",
           "Ratting.Domain": "1.0.0"
         },
         "runtime": {
@@ -836,7 +836,7 @@
         }
       },
       "System.Threading.Channels/6.0.0": {},
-      "Ratting.Aplication/1.0.0": {
+      "Ratting.Application/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
           "FluentValidation": "11.9.2",
@@ -848,7 +848,7 @@
           "Ratting.Domain": "1.0.0"
         },
         "runtime": {
-          "Ratting.Aplication.dll": {}
+          "Ratting.Application.dll": {}
         }
       },
       "Ratting.Domain/1.0.0": {
@@ -1284,7 +1284,7 @@
       "path": "system.threading.channels/6.0.0",
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
     },
-    "Ratting.Aplication/1.0.0": {
+    "Ratting.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

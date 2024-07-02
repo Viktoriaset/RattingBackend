@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ratting.WepAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6b46db4fd6d2314d50f806c2416a3fab828f9fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fadf058cf23fcee794170c8d3f8960313efb758")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ratting.WepAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ratting.WepAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
