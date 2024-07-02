@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using FluentValidation;
+using Ratting.Aplication.Battle;
 using Ratting.Aplication.Common.Behaviors;
 using Ratting.Aplication.MatchMaking;
 
@@ -14,6 +15,7 @@ namespace Ratting.Aplication
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
             services.AddValidatorsFromAssemblies(new[] { Assembly.GetExecutingAssembly() });
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddSingleton<BattleCreateService>();
             services.AddSingleton<MatchMakingConfiguration>();
             services.AddSingleton<MatchMakingService>();
             return services;
