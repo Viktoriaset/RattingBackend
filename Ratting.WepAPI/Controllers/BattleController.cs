@@ -9,19 +9,17 @@ namespace Ratting.WepAPI.Controllers;
 public class BattleController: BaseController
 {
     private readonly IMapper m_mapper;
-    private readonly IMediator m_mediator;
 
-    public BattleController(IMapper mapper, IMediator mediator)
+    public BattleController(IMapper mapper)
     {
         m_mapper = mapper;
-        m_mediator = mediator;
     }
     
     [HttpPost]
     public async Task<IActionResult> FindBattle([FromBody] FinishBattleDto dto)
     {
         var command = m_mapper.Map<FinishBattleCommand>(dto);
-        await m_mediator.Send(command);
+        await Mediator.Send(command);
         return Ok();
     }
 }
