@@ -1226,7 +1226,7 @@
           "buildTransitive/netcoreapp3.1/_._": {}
         }
       },
-      "Ratting.Aplication/1.0.0": {
+      "Ratting.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
@@ -1240,10 +1240,10 @@
           "Ratting.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Ratting.Aplication.dll": {}
+          "bin/placeholder/Ratting.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Ratting.Aplication.dll": {}
+          "bin/placeholder/Ratting.Application.dll": {}
         }
       },
       "Ratting.Domain/1.0.0": {
@@ -3000,10 +3000,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Ratting.Aplication/1.0.0": {
+    "Ratting.Application/1.0.0": {
       "type": "project",
-      "path": "../Ratting.Aplication/Ratting.Aplication.csproj",
-      "msbuildProject": "../Ratting.Aplication/Ratting.Aplication.csproj"
+      "path": "../Ratting.Application/Ratting.Application.csproj",
+      "msbuildProject": "../Ratting.Application/Ratting.Application.csproj"
     },
     "Ratting.Domain/1.0.0": {
       "type": "project",
@@ -3017,7 +3017,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.6",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.6",
-      "Ratting.Aplication >= 1.0.0",
+      "Ratting.Application >= 1.0.0",
       "Ratting.Domain >= 1.0.0"
     ]
   },
@@ -3049,8 +3049,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj": {
-              "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj"
+            "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj": {
+              "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj"
             },
             "E:\\UnityProjects\\Ratting\\Server\\Ratting.Domain\\Ratting.Domain.csproj": {
               "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Domain\\Ratting.Domain.csproj"

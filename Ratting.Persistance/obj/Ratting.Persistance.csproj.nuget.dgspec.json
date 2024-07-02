@@ -4,14 +4,14 @@
     "E:\\UnityProjects\\Ratting\\Server\\Ratting.Persistance\\Ratting.Persistance.csproj": {}
   },
   "projects": {
-    "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj": {
+    "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj",
-        "projectName": "Ratting.Aplication",
-        "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj",
+        "projectUniqueName": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj",
+        "projectName": "Ratting.Application",
+        "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\obj\\",
+        "outputPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -189,8 +189,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj": {
-                "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Aplication\\Ratting.Aplication.csproj"
+              "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj": {
+                "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Application\\Ratting.Application.csproj"
               },
               "E:\\UnityProjects\\Ratting\\Server\\Ratting.Domain\\Ratting.Domain.csproj": {
                 "projectPath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Domain\\Ratting.Domain.csproj"
