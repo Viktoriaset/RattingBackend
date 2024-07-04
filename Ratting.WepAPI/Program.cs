@@ -8,6 +8,8 @@ using Newtonsoft.Json;
 using Ratting.Aplication;
 using Ratting.Persistance.Middleware;
 using Ratting.WepAPI.Models.FindBattleModel;
+using Ratting.WepAPI.Models.FinishBattleModel;
+using Ratting.WepAPI.Models.UpdatePlayerModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +23,8 @@ builder.Services.AddControllers()
 builder.Services.AddControllers(options =>
 {
     options.ModelBinderProviders.Insert(0, new FindBattleDtoModelBinderProvider());
+    options.ModelBinderProviders.Insert(1, new FinishBattleDtoModelBinderProvider());
+    options.ModelBinderProviders.Insert(2, new UpdatePlayerDtoModelBinderProvider());
 });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
