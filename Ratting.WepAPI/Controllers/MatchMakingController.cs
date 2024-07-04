@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Ratting.Aplication.MatchMaking;
 using Ratting.Application.MatchMaking;
 using Ratting.WepAPI.Models;
 

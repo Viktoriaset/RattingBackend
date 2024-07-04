@@ -2,5 +2,5 @@
 
 public class MatchMakingConfiguration
 {
-    public int MaxPlayer = 4;
+    public int MaxPlayer = 2;
 }

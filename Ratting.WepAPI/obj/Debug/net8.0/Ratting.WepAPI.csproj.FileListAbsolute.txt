@@ -72,3 +72,7 @@ E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\FluentValidation
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Application.dll
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Ratting.Application.pdb
 E:\UnityProjects\Ratting\Server\Ratting.WepAPI\obj\Debug\net8.0\Ratting.WepAPI.sourcelink.json
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+E:\UnityProjects\Ratting\Server\Ratting.WepAPI\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

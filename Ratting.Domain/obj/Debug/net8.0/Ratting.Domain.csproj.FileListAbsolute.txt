@@ -11,3 +11,4 @@ E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\refint\Ratting.D
 E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.pdb
 E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.genruntimeconfig.cache
 E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\ref\Ratting.Domain.dll
+E:\UnityProjects\Ratting\Server\Ratting.Domain\obj\Debug\net8.0\Ratting.Domain.sourcelink.json

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ratting.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8fadf058cf23fcee794170c8d3f8960313efb758")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae9b2cea0634d4a5af4331a31d770191e8611f66")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ratting.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ratting.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

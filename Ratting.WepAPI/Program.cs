@@ -4,13 +4,24 @@ using Ratting.Application;
 using Ratting.Persistance;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 using Ratting.Aplication;
 using Ratting.Persistance.Middleware;
+using Ratting.WepAPI.Models.FindBattleModel;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+    {
+        options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+        options.SerializerSettings.DefaultValueHandling = DefaultValueHandling.Ignore;
+    });
+builder.Services.AddControllers(options =>
+{
+    options.ModelBinderProviders.Insert(0, new FindBattleDtoModelBinderProvider());
+});
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(config =>
@@ -19,8 +30,8 @@ builder.Services.AddAutoMapper(config =>
     config.AddProfile(new AssemblyMappingProfile(typeof(IRattingDBContext).Assembly));
 });
 builder.Services.AddHttpClient();
-builder.Services.AddApplication();
 builder.Services.AddPersistence(builder.Configuration);
+builder.Services.AddApplication();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", policy =>
