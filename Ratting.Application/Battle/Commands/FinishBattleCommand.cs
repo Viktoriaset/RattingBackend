@@ -7,4 +7,5 @@ public class FinishBattleCommand: IRequest
     public Guid roomId;
     public Guid PlayerId;
     public int PlayerResult;
+    public int PlayerPosition;
 }

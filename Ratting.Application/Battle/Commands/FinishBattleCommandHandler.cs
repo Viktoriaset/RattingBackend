@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using Ratting.Application.Common.Exceptions;
 using Ratting.Application.Interfaces;
-using Ratting.Application.MatchMaking;
 using Ratting.Domain;
 
 namespace Ratting.Aplication.Battle.Commands;
@@ -10,11 +9,14 @@ public class FinishBattleCommandHandler: IRequestHandler<FinishBattleCommand>
 {
     private readonly BattleRoomsController m_battleRoomsController;
     private readonly IRattingDBContext m_dbContext;
+    private readonly BattleRewardConfig m_battleRewardConfig;
 
-    public FinishBattleCommandHandler(BattleRoomsController battleRoomsController, IRattingDBContext rattingDbContext)
+    public FinishBattleCommandHandler(BattleRoomsController battleRoomsController, IRattingDBContext rattingDbContext,
+        BattleRewardConfig battleRewardConfig)
     {
         m_battleRoomsController = battleRoomsController;
         m_dbContext = rattingDbContext;
+        m_battleRewardConfig = battleRewardConfig;
     }
     
     public async Task Handle(FinishBattleCommand request, CancellationToken cancellationToken)
@@ -24,20 +26,12 @@ public class FinishBattleCommandHandler: IRequestHandler<FinishBattleCommand>
         {
             throw new NotFoundException($"{nameof(Player)}", request.PlayerId);
         }
-
-        player.BestResult = request.PlayerResult > player.BestResult ? request.PlayerResult : player.BestResult;
-
+        
         try
         {
-            m_battleRoomsController.OnBattleFinishedAsync(request.roomId);
-        }
-        catch (NotFoundException e)
-        {
-            // Ожидаемая ошибка при отправке уведомлений о завершении битвы от всех ее участников.
-        }
-        catch (Exception e)
-        {
-            throw;
+            m_battleRoomsController.OnBattleFinishedAsync(request.roomId, player);
+            player.Money += m_battleRewardConfig.GetReward(request.PlayerPosition);
+            player.BestResult = request.PlayerResult > player.BestResult ? request.PlayerResult : player.BestResult;
         }
         finally
         {

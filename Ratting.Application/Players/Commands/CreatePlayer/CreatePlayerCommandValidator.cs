@@ -9,7 +9,7 @@ public class CreatePlayerCommandValidator: AbstractValidator<CreatePlayerCommand
         RuleFor(player =>
                 player.Name)
             .NotEmpty()
-            .MaximumLength(250)
-            .MinimumLength(5);
+            .MinimumLength(5)
+            .MaximumLength(20);
     }
 }

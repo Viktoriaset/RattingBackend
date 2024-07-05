@@ -6,6 +6,7 @@ using Ratting.WepAPI.Models;
 
 namespace Ratting.WepAPI.Controllers;
 
+[Route("api/finishBattle")]
 public class BattleController: BaseController
 {
     private readonly IMapper m_mapper;
@@ -16,7 +17,7 @@ public class BattleController: BaseController
     }
     
     [HttpPost]
-    public async Task<IActionResult> FindBattle([FromBody] FinishBattleDto dto)
+    public async Task<IActionResult> FinishBattle([FromBody] FinishBattleDto dto)
     {
         var command = m_mapper.Map<FinishBattleCommand>(dto);
         await Mediator.Send(command);

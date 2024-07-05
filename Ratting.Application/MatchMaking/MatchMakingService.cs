@@ -36,7 +36,7 @@ public class MatchMakingService
             var p = m_qOnBattle.FirstOrDefault(bp => bp.Player.Id == player.Id);
             if (p != null)
             {
-                
+                throw new PlayerAlreadyInQ(player.Id);
             }
 
             BattleParticipant battleParticipant = new BattleParticipant()

@@ -29,15 +29,15 @@ public class BattleCreateService
 
         try
         {
-            await SendCreateRoom(values, host);
+           // await SendCreateRoom(values, host);
 
             List<Task> waitingPlayers = new List<Task>();
             for (int i = 1; i < participants.Count; i++)
             {
-                waitingPlayers.Add(SendConnectToRoom(values, participants[i], roomName.ToString()));
+               // waitingPlayers.Add(SendConnectToRoom(values, participants[i], roomName.ToString()));
             }
 
-            await Task.WhenAll(waitingPlayers);
+            //await Task.WhenAll(waitingPlayers);
             OnRoomCreated(participants, roomName);
         }
         catch (Exception e)

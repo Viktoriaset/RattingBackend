@@ -13,7 +13,7 @@ namespace Ratting.Persistance
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=E:\\UnityProjects\\Ratting\\Server\\Ratting.Persistance\\ratting.sqlite");
+            optionsBuilder.UseSqlite($"Data Source={DBConfig.DATA_SOURCE}");
             base.OnConfiguring(optionsBuilder);
         }
 

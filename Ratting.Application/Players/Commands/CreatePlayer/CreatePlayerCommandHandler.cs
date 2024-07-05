@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ratting.Application.Common.Exceptions;
 using Ratting.Application.Interfaces;
 using Ratting.Domain;
 
@@ -26,6 +27,12 @@ namespace Ratting.Application.Players.Commands.CreatePlayer
                 Id = request.Id,
                 Name = request.Name,
             };
+
+            var existPlayer = m_dbContext.players.FirstOrDefault(p => p.Name == player.Name);
+            if (existPlayer != null)
+            {
+                throw new PlayerAlreadyExist(player.Name);
+            }
 
             await m_dbContext.players.AddAsync(player, cancellationToken);
             await m_dbContext.SaveChangeAsync(cancellationToken);

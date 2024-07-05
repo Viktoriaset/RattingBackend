@@ -1,20 +1,24 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Ratting.Application.Battle;
 using Ratting.Application.Common.Exceptions;
+using Ratting.Application.Common.MessageParamsName;
 using Ratting.Application.Interfaces;
+using Ratting.Domain;
 
 namespace Ratting.Aplication.Battle;
 
 public class BattleRoomsController
 {
-    private const int BATTLE_REWARD = 10;
+    private const int TIME_WAIT_USERS = 30000;
 
-    private readonly IServiceScopeFactory m_serviceScopeFactory;
-    private readonly List<BattleRoom> m_rooms;
+    private readonly List<BattleRoom> m_rooms = new ();
+    private readonly HttpClient m_client;
+    private CancellationTokenSource m_cts;
 
-    public BattleRoomsController(IServiceScopeFactory serviceScopeFactory)
+    public BattleRoomsController(HttpClient httpClient)
     {
-        m_serviceScopeFactory = serviceScopeFactory;
+        m_client = httpClient;
+        m_cts = new CancellationTokenSource();
     }
 
     public void OnRoomCreated(BattleRoom room)
@@ -22,7 +26,7 @@ public class BattleRoomsController
         m_rooms.Add(room);
     }
 
-    public async void OnBattleFinishedAsync(Guid roomId)
+    public async void OnBattleFinishedAsync(Guid roomId, Player player)
     {
         BattleRoom battleRoom = m_rooms.FirstOrDefault(room => room.roomId == roomId);
         if (battleRoom == null)
@@ -30,21 +34,52 @@ public class BattleRoomsController
             throw new NotFoundException($"{nameof(BattleRoom)}", roomId);
         }
 
-        foreach (var particapant in battleRoom.Participants)
+        BattleParticipant p = battleRoom.Participants.FirstOrDefault(partic => partic.Player.Id == player.Id);
+        if (p == null)
         {
-            particapant.Player.Money += BATTLE_REWARD;
+            throw new PlayerAlreadyLeaveFromRoom(player.Id, roomId);
         }
 
-        var cts = new CancellationTokenSource();
-        SaveChangeAsync(cts);
+        battleRoom.Participants.Remove(p);
+        if (battleRoom.Participants.Count == 0)
+        {
+            m_cts.Cancel();
+            m_rooms.Remove(battleRoom);
+            return;
+        }
 
-        m_rooms.Remove(battleRoom);
+        RemoveRoomIfTimeExpired(battleRoom, m_cts.Token);
+    }
+    
+    private async void RemoveRoomIfTimeExpired(BattleRoom battleRoom, CancellationToken ct)
+    {
+        try
+        {
+            await Task.Delay(TIME_WAIT_USERS, ct);
+            if (m_rooms.Contains(battleRoom))
+            {
+                foreach (var participant in battleRoom.Participants)
+                {
+                    SendRoomDestroyd(participant);
+                }
+
+                m_rooms.Remove(battleRoom);
+            }
+        }
+        catch (TaskCanceledException e)
+        {
+            // Ожидаемая ошибка при отмене автоудаления комнаты.
+        }
     }
 
-    private async void SaveChangeAsync(CancellationTokenSource cts)
+    private void SendRoomDestroyd(BattleParticipant participant)
     {
-        using var scope = m_serviceScopeFactory.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<IRattingDBContext>();
-        await dbContext.SaveChangeAsync(cts.Token);
+        var values = new Dictionary<string, string>()
+        {
+            { MessageParamNameS.RoomDestroyd, "" }
+        };
+        
+        var content = new FormUrlEncodedContent(values);
+        m_client.PostAsync(participant.PlayerAddress, content);
     }
 }

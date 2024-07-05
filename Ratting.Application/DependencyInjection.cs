@@ -14,6 +14,7 @@ namespace Ratting.Aplication
     {
         public static void AddApplication(this IServiceCollection services)
         {
+            services.AddSingleton<BattleRewardConfig>();
             services.AddSingleton<MatchMakingConfiguration>();
             services.AddSingleton<BattleRoomsController>();
             services.AddSingleton<BattleCreateService>();

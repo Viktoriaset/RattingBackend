@@ -8,7 +8,8 @@ namespace Ratting.Persistance.EntityTypeConfigurations
     {
         public void Configure(EntityTypeBuilder<Player> builder)
         {
-            builder.HasKey(player => player.Name);
+            builder.HasKey(player => player.Id);
+            builder.Property(player => player.Name).HasMaxLength(20);
             builder.HasIndex(player => player.Name).IsUnique();
 
             builder.Property(player => player.Money);

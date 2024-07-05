@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Ratting.Application.Players.Commands.CreatePlayer;
-using Ratting.Application.Players.Commands.UpdatePlayer;
 using Ratting.Application.Players.Queries;
 using Ratting.Application.Players.Queries.GetPlayer;
 using Ratting.WepAPI.Models;
@@ -37,14 +36,6 @@ namespace Ratting.WepAPI.Controllers
             command.Id = Guid.NewGuid();
             await Mediator.Send(command);
             return Ok(command.Id);
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> Update([FromBody] UpdatePlayerDto updatePlayerDto)
-        {
-            var command = m_mapper.Map<UpdatePlayerCommand>(updatePlayerDto);
-            await Mediator.Send(command);
-            return NoContent();
         }
     }
 }

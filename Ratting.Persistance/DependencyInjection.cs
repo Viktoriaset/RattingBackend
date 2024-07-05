@@ -14,7 +14,7 @@ namespace Ratting.Persistance
     {
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration["Data Source=ratting.sqlite"];
+            var connectionString = configuration[$"Data Source={DBConfig.DATA_SOURCE}"];
             services.AddDbContext<RattingDbContext>(options =>
             {
                 options.UseSqlite(connectionString);

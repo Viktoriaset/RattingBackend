@@ -33,6 +33,14 @@ public class CustomExceptionHandlerMiddleware
         var result = string.Empty;
         switch (exception)
         {
+            case PlayerAlreadyLeaveFromRoom playerAlreadyLeaveFromRoom:
+                code = HttpStatusCode.BadRequest;
+                result = playerAlreadyLeaveFromRoom.Message;
+                break;
+            case PlayerAlreadyExist playerAlreadyExist:
+                code = HttpStatusCode.BadRequest;
+                result = playerAlreadyExist.Message;
+                break;
             case PlayerAlreadyInQ playerAlreadyInQ:
                 code = HttpStatusCode.BadRequest;
                 result = playerAlreadyInQ.Message;
