@@ -19,21 +19,24 @@ namespace Ratting.Persistance.Migrations
 
             modelBuilder.Entity("Ratting.Domain.Player", b =>
                 {
-                    b.Property<string>("name")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
                     b.Property<int>("BestResult")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid>("Id")
-                        .HasColumnType("TEXT");
-
                     b.Property<int>("Money")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("name");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("TEXT");
 
-                    b.HasIndex("name")
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
                         .IsUnique();
 
                     b.ToTable("players");

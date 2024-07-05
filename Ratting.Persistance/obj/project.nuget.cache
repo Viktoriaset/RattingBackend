@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "e8rTlknJHjF6EqtN01UWm+zocxrvdzNB7XNTVLxYVTMdS9Jo76aUpiZdpGp/bpRcKvG9asEFw9HPSxiclde5Ow==",
+  "dgSpecHash": "jnpEKp2QMRg=",
   "success": true,
   "projectFilePath": "E:\\UnityProjects\\Ratting\\Server\\Ratting.Persistance\\Ratting.Persistance.csproj",
   "expectedPackageFiles": [
@@ -70,7 +70,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.3.0 was resolved.",
+      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 требуется MediatR (>= 11.0.0 && < 12.0.0), но в результате разрешения получена версия MediatR 12.3.0.",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net8.0"
