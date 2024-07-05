@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Ratting.Application.Players.Commands.CreatePlayer;
 using Ratting.Application.Players.Queries;
 using Ratting.Application.Players.Queries.GetPlayer;
@@ -35,7 +36,11 @@ namespace Ratting.WepAPI.Controllers
             var command = m_mapper.Map<CreatePlayerCommand>(createPlayerDto);
             command.Id = Guid.NewGuid();
             await Mediator.Send(command);
-            return Ok(command.Id);
+            var value = new Dictionary<string, string>()
+            {
+                { "PlayerId", command.Id.ToString() }
+            };
+            return Ok(JsonConvert.SerializeObject(value));
         }
     }
 }

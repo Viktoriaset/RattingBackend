@@ -1388,6 +1388,7 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
           "Ratting.Domain": "1.0.0"
         },
         "compile": {
@@ -3690,11 +3691,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3744,7 +3740,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Версия обнаруженного пакета нарушает ограничение зависимости: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 требуется MediatR (>= 11.0.0 && < 12.0.0), но в результате разрешения получена версия MediatR 12.3.0.",
+      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.3.0 was resolved.",
       "libraryId": "MediatR",
       "targetGraphs": [
         "net8.0"

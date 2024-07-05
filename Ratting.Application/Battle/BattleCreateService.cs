@@ -1,4 +1,7 @@
-﻿using Ratting.Aplication.Battle;
+﻿using System.Text;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+using Ratting.Aplication.Battle;
 using Ratting.Application.Common.MessageParamsName;
 using Ratting.Application.MatchMaking;
 
@@ -29,15 +32,15 @@ public class BattleCreateService
 
         try
         {
-           // await SendCreateRoom(values, host);
+            await SendCreateRoom(values, host);
 
             List<Task> waitingPlayers = new List<Task>();
             for (int i = 1; i < participants.Count; i++)
             {
-               // waitingPlayers.Add(SendConnectToRoom(values, participants[i], roomName.ToString()));
+               waitingPlayers.Add(SendConnectToRoom(values, participants[i], roomName.ToString()));
             }
 
-            //await Task.WhenAll(waitingPlayers);
+            await Task.WhenAll(waitingPlayers);
             OnRoomCreated(participants, roomName);
         }
         catch (Exception e)
@@ -51,19 +54,21 @@ public class BattleCreateService
         values.Add(MessageParamNameI.MaxPlayers, m_matchMakingConfiguration.MaxPlayer.ToString());
         values.Add(MessageParamNameB.IsHost, "1");
 
-        var content = new FormUrlEncodedContent(values);
+        var json = JsonConvert.SerializeObject(values);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        HttpResponseMessage response = await m_client.PostAsync(participant.PlayerAddress, content);
+        HttpResponseMessage response = await m_client.PostAsync(participant.PlayerAddress + "roomCreate", content);
         response.EnsureSuccessStatusCode();
     }
 
     private async Task SendConnectToRoom(Dictionary<string, string> values, BattleParticipant participant, string roomName)
     {
-        values.Add(MessageParamNameB.IsHost, "0");
+        values[MessageParamNameB.IsHost] = "0";
         
-        var content = new FormUrlEncodedContent(values);
+        var json = JsonConvert.SerializeObject(values);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-        var responce = await m_client.PostAsync(participant.PlayerAddress, content);
+        var responce = await m_client.PostAsync(participant.PlayerAddress + "roomCreate", content);
         responce.EnsureSuccessStatusCode();
     }
     
@@ -85,7 +90,8 @@ public class BattleCreateService
             { Protocols.BattleCanceled, "" }
         };
 
-        var content = new FormUrlEncodedContent(values);
+        var json = JsonConvert.SerializeObject(values);
+        var content = new StringContent(json, Encoding.UTF8, "application/json");
         
         foreach (var participant in participants)
         {

@@ -831,6 +831,7 @@
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.EntityFrameworkCore": "8.0.6",
           "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "Newtonsoft.Json": "13.0.3",
           "Ratting.Domain": "1.0.0"
         },
         "runtime": {
